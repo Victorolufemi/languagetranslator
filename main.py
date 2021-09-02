@@ -15,7 +15,7 @@ path = "model_s/Language.pt"
 model_pt = torch.load(path,map_location=torch.device('cpu'))
 
 src = pickle.load( open( 'model_s/input.pkl', "wb" )) 
-trg = pickle.load( open( 'model_s/output.pkl, "wb" ))
+trg = pickle.load( open( 'model_s/output.pkl', "wb" ))
 
 modelp = make_model(src.n_words,trg.n_words,N=6)
 modelp.load_state_dict(model_pt)
